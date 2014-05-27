@@ -1,4 +1,2 @@
-ntp:
+git:
   pkg.installed
-
-

@@ -1,4 +1,2 @@
-ntp:
+vim-enhanced:
   pkg.installed
-
-

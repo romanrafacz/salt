@@ -1,4 +1,2 @@
-ntp:
+nginx:
   pkg.installed
-
-
