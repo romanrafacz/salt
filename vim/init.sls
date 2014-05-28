@@ -2,11 +2,12 @@ vim-enhanced:
   pkg.installed
 
 /etc/skel/.vimrc:
-  source: salt://vim/.vimrc
-  - user: root
-  - group: root
-  - mode: 644
-  - template: jinja
+  file.managed:
+    - source: salt://vim/.vimrc
+    - user: root
+    - group: root
+    - mode: 644
+    - template: jinja
 
 /etc/skel/.vim:
   file.directory:
