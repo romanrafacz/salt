@@ -2,7 +2,7 @@ vim-enhanced:
   pkg.installed
 
 /etc/skel/.vimrc:
-  drectory.managed:
+  file.managed:
     - source: salt://vim/.vimrc
     - user: root
     - group: root
