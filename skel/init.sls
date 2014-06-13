@@ -10,7 +10,7 @@ https://github.com/robbyrussell/oh-my-zsh.git:
 
 /etc/skel/.vimrc:
   file.managed:
-    - source: salt:/skel/.vimrc
+    - source: salt://skel/.vimrc
     - user: root
     - group: root
     - mode: 644
@@ -24,7 +24,7 @@ https://github.com/robbyrussell/oh-my-zsh.git:
     - file_mode: 655
 
 https://github.com/tpope/vim-pathogen.git:
-  git.lates:
+  git.latest:
     - rev: master
     - target: /etc/skel/.vim
     - force: True
