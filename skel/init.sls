@@ -10,7 +10,7 @@ https://github.com/robbyrussell/oh-my-zsh.git:
 
 /etc/skel/.vimrc:
   file.managed:
-    - source: salt:/vim/.vimrc
+    - source: salt:/skel/.vimrc
     - user: root
     - group: root
     - mode: 644
