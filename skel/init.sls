@@ -38,3 +38,14 @@ https://github.com/scrooloose/syntastic.git:
     - target: /etc/skel/.vim/bundle
     - force: True
 
+https://github.com/tpope/vim-surround.git:
+  git.latest:
+    - rev: master
+    - target: /etc/skel/.vim/bundle
+    - force: True
+
+https://github.com/tpope/vim-fugitive.git:
+  git.latest:
+    - rev: master
+    - target: /etc/skel/.vim/bundle
+    - force: True
