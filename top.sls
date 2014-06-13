@@ -1,7 +1,5 @@
 base:
   '*':
-    - ntp
-    - ntpdate
-    - openldap
+    - skel
   'webserver':
     - nginx

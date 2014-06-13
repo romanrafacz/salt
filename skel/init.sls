@@ -17,7 +17,7 @@ https://github.com/robbyrussell/oh-my-zsh.git:
     - template: jinja
 
 /etc/skel/.vim:
-  file.directory
+  file.directory:
     - user:  root
     - group: root
     - dir_mode: 755
