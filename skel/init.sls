@@ -6,7 +6,7 @@ https://github.com/robbyrussell/oh-my-zsh.git:
 
 .zshrc:
   cmd.run:
-    - name: "cp /etc/skel/.oh-my-zsh/templates/zshrc.zsh-template /etc/skel/.zshrc"
+    - name: "curl -L http://install.ohmyz.sh | sh"
 
 /etc/skel/.vimrc:
   file.managed:
