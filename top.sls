@@ -1,5 +1,4 @@
 base:
-  '*':
+  'minion':
     - skel
-  'webserver':
     - nginx
