@@ -1,9 +1,10 @@
 nginx-server:
   pkg.installed:
-    -name: nginx
+    - name: nginx
 
 nginx-service:
   service.running:
-    -neable: True
+    - name: nginx
+    - enable: True
 
 
