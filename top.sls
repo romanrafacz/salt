@@ -1,7 +1,11 @@
 base:
   '*':
-    - nginx
-    - tomcat
-    - postgres
-    - epel
+    - yum
+    - ntp
+    - ntpdate
+    - git
     - vim
+    - zsh
+    - oh-my-zsh
+    - roman
+   
