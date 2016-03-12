@@ -1,4 +1,4 @@
 roman:
   user.present:
     - home:  /home/roman
-    - shell: /bin/bash
+    - shell: /bin/zsh
