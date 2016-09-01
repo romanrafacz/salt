@@ -3,7 +3,7 @@ vim-enhanced:
 
 vimrc:
   file.managed:
-    - name: /home/roman/.vimrc
+    - name: /etc/skel/.vimrc
     - source: salt://vim/files/vimrc
     - mode: 644
 

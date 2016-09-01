@@ -2,7 +2,7 @@
 {% set service = "tomcat" ~ version %}
 {% set tomcat = salt['grains.filter_by']({
     'Debian': {
-        'name': 'tomcat',
+        'name': 'tomcat8',
         'version': version,
         'service': service,
         'native': 'libtcnative-1',

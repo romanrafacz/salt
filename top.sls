@@ -1,20 +1,14 @@
 base:
-    '*':
-      - yum
+    't':
+      - epel
       - ntp
       - ntpdate
       - git
       - vim
       - zsh
       - oh-my-zsh
-      - roman
-      - nginx 
-    'salty1':
-      - sensu
-      - redis
-      - rabbitmq
-    'tomcat':
-      - nginx
-      
-
-   
+      - users
+    'sensu-client':
+      - tomcat
+    'turkey':
+      - sun-java
