@@ -1,5 +1,5 @@
 base:
-    't':
+    '*':
       - epel
       - ntp
       - ntpdate
@@ -12,3 +12,8 @@ base:
       - tomcat
     'turkey':
       - sun-java
+      - users
+      - zsh
+      - iptables
+    'stacks':
+      - iptables
