@@ -8,6 +8,8 @@ base:
       - zsh
       - oh-my-zsh
       - users
+      - rabbitmq
+      - sensu.client
     'sensu-client':
       - tomcat
     'turkey':
@@ -17,3 +19,6 @@ base:
       - iptables
     'stacks':
       - iptables
+    'nginx':
+      - rabbitmq
+      - sensu.client
