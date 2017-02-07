@@ -10,6 +10,7 @@ base:
       - users
       - rabbitmq
       - sensu.client
+      - jar
     'sensu-client':
       - tomcat
     'turkey':
