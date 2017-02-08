@@ -5,7 +5,6 @@ base:
       - ntp
       - ntpdate
       - git
-      - vim
       - zsh
       - oh-my-zsh
       - users
