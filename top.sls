@@ -1,6 +1,7 @@
 base:
     '*':
       - epel
+      - curl
       - ntp
       - ntpdate
       - git
@@ -10,7 +11,7 @@ base:
       - users
       - rabbitmq
       - sensu.client
-      - jar
+      - sun-java
     'sensu-client':
       - tomcat
     'turkey':
