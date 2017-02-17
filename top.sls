@@ -8,10 +8,7 @@ base:
       - zsh
       - oh-my-zsh
       - users
-      - sun-java
       - openssh
-      - jar
-      - maven
     'sensu-client':
       - tomcat
     'turkey':
@@ -24,3 +21,6 @@ base:
     'nginx':
       - rabbitmq
       - sensu.client
+    'jvm*':
+      - maven
+      - sun-java

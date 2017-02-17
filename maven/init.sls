@@ -17,3 +17,9 @@ apache-maven-home-link:
     - link: {{ maven.m2_home }}
     - path: {{ maven.real_home }}
     - priority: 30
+
+symlink:
+  file.symlink:
+    - name: /usr/bin/mvn
+    - target: /usr/lib/apache-maven-3.3.9/bin/mvn
+
