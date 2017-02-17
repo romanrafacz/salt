@@ -8,9 +8,10 @@ base:
       - zsh
       - oh-my-zsh
       - users
-      - rabbitmq
-      - sensu.client
       - sun-java
+      - openssh
+      - jar
+      - maven
     'sensu-client':
       - tomcat
     'turkey':

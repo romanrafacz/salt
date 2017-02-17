@@ -10,8 +10,8 @@ create_jar_dir:
 deploy-jar:
   file.managed:
     - name: /usr/java_app/name.jar
-    - source: salt://jars/steamboat.jar 
+    - source: salt://steam/steam/target/steamboat-0.0.1-SNAPSHOT.jar 
 
-run_jar:
-  cmd.run:
-    - name: "java -jar /usr/java_app/name.jar"
+#run_jar:
+#  cmd.run:
+#    - name: "java -jar /usr/java_app/name.jar"
