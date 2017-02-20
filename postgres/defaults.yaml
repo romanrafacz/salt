@@ -1,19 +1,43 @@
+# Default lookup dictionary
+
 postgres:
+  use_upstream_repo: True
+  version: '9.5'
   pkg: postgresql
+  pkgs_extra: []
+  pkg_client: postgresql-client
   pkg_dev: postgresql-devel
   pkg_libpq_dev: postgresql-libs
-  pkg_client: postgresql-client
-  pkg_contrib: postgresql-contrib
   python: python-psycopg2
-  service: postgresql
+  user: postgres
+  group: postgres
+
+  prepare_cluster:
+    command: initdb --pgdata=/var/lib/pgsql/data
+    test: test -f /var/lib/pgsql/data/PG_VERSION
+    user: postgres
+    env: {}
+
   conf_dir: /var/lib/pgsql/data
-  create_cluster: False
-  init_db: False
-  version: 9.1
-  use_upstream_repo: False
-  users: {}
-  acls: []
-  databases: {}
-  tablespaces: {}
   postgresconf: ""
-  pg_hba.conf: salt://postgres/pg_hba.conf
+
+  pg_hba.conf: salt://postgres/templates/pg_hba.conf.j2
+  acls:
+    # "local" is for Unix domain socket connections only
+    - ['local', 'all', 'all', 'peer']
+    # IPv4 local connections:
+    - ['host', 'all', 'all', '127.0.0.1/32', 'md5']
+    # IPv6 local connections:
+    - ['host', 'all', 'all', '::1/128', 'md5']
+
+  config_backup: '.bak'
+
+  service: postgresql
+
+  bake_image: False
+
+  users: {}
+  tablespaces: {}
+  databases: {}
+  schemas: {}
+  extensions: {}

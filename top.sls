@@ -8,7 +8,6 @@ base:
       - zsh
       - oh-my-zsh
       - users
-      - openssh
     'sensu-client':
       - tomcat
     'turkey':
