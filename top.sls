@@ -23,3 +23,4 @@ base:
     'jvm*':
       - maven
       - sun-java
+      - iptables
