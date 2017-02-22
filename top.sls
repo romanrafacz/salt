@@ -10,11 +10,6 @@ base:
       - users
     'sensu-client':
       - tomcat
-    'turkey':
-      - sun-java
-      - users
-      - zsh
-      - iptables
     'stacks':
       - iptables
     'nginx':
