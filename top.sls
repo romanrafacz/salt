@@ -8,14 +8,16 @@ base:
       - zsh
       - oh-my-zsh
       - users
-    'sensu-client':
-      - tomcat
-    'stacks':
       - iptables
-    'nginx':
-      - rabbitmq
-      - sensu.client
-    'jvm*':
+    'db*':
+      - postgres
       - maven
       - sun-java
-      - iptables
+    'sensu-client':
+      - tomcat
+    'webserver*':
+      - rabbitmq
+      - sensu.client
+    'appserver*':
+      - maven
+      - sun-java
