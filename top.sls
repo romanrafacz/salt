@@ -21,3 +21,5 @@ base:
     'appserver*':
       - maven
       - sun-java
+    'nagios':
+      - postgres
