@@ -7,6 +7,7 @@ base:
       - git
       - zsh
       - oh-my-zsh
+      - ssh
       - users
       - iptables
     'db*':
@@ -21,5 +22,6 @@ base:
     'appserver*':
       - maven
       - sun-java
+      - jar
     'nagios':
       - postgres
