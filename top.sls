@@ -25,3 +25,7 @@ base:
       - jar
     'nagios':
       - postgres
+    'elastic*':
+      - sun-java
+      - elasticsearch
+      - kibana
