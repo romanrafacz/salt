@@ -10,6 +10,7 @@ base:
       - ssh
       - users
       - iptables
+      - nagios.nrpe
     'db*':
       - postgres
       - maven
@@ -29,3 +30,4 @@ base:
       - sun-java
       - elasticsearch
       - kibana
+      - nginx

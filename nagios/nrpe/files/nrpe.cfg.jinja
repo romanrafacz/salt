@@ -1,0 +1,39 @@
+{% set nrpe = salt['pillar.get']('nagios:nrpe', {}) -%}
+{% from "nagios/map.jinja" import nrpe as nrpe_map with context -%}
+
+# DO NOT EDIT
+#
+# This file is managed by salt.
+# Modify the config that generates this file instead
+#
+
+log_facility=daemon
+pid_file={{ nrpe.get('pid_file', '/var/run/nagios/nrpe.pid') }}
+server_port={{ nrpe.get('server_port', '5666') }}
+{% if nrpe.get('server_address') %}
+server_address={{ nrpe.get('server_address', '127.0.0.1') }}
+{% endif %}
+nrpe_user={{ nrpe_map.get('user', 'nagios') }}
+nrpe_group={{ nrpe_map.get('group', 'nagios') }}
+allowed_hosts={{ nrpe.get('allowed_hosts', '127.0.0.1') }}
+dont_blame_nrpe={{ nrpe.get('dont_blame_nrpe', 0) }}
+# command_prefix=/usr/bin/sudo
+debug=0
+command_timeout={{ nrpe.get('command_timeout', '60') }}
+connection_timeout={{ nrpe.get('connection_timeout', '300') }}
+{%- if nrpe_map.get('cfg_dir', false) %}
+include_dir={{nrpe_map.get('cfg_dir')}}
+{%- endif %}
+#allow_weak_random_seed=1
+
+{%- if nrpe.nrpe_commands is defined %}
+{%- if nrpe.get('nrpe_commands') is mapping %}
+{%- for nrpe_command in nrpe.get('nrpe_commands').values() %}
+{{ nrpe_command }}
+{%- endfor %}
+{%- elif nrpe.get('nrpe_commands') is iterable %}
+{%- for nrpe_command in nrpe.get('nrpe_commands') %}
+{{ nrpe_command }}
+{%- endfor %}
+{%- endif %}
+{%- endif %}
