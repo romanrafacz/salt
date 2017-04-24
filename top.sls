@@ -30,4 +30,10 @@ base:
       - sun-java
       - elasticsearch
       - kibana
+      - maven
+    'nginx*':
       - nginx
+    'icinga*':
+      - postgres
+      - icinga2
+      - icinga2.icinga-web2
