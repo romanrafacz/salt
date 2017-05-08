@@ -15,6 +15,7 @@ base:
       - postgres
       - maven
       - sun-java
+      - docker 
     'sensu-client':
       - tomcat
     'webserver*':
@@ -37,3 +38,7 @@ base:
       - postgres
       - icinga2
       - icinga2.icinga-web2
+    'build*':
+      - docker
+      - sun-java
+      - maven
