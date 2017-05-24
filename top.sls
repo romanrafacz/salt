@@ -42,3 +42,6 @@ base:
       - docker
       - sun-java
       - maven
+    'stacks*':
+      - sun-java
+      - maven
