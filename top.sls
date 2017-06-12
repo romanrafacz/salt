@@ -9,6 +9,7 @@ base:
       - oh-my-zsh
       - ssh
       - users
+      - vim
       - iptables
       - nagios.nrpe
     'db*':
@@ -45,3 +46,4 @@ base:
     'stacks*':
       - sun-java
       - maven
+      - postgres
