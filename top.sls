@@ -47,3 +47,9 @@ base:
       - sun-java
       - maven
       - postgres
+      - steam
+    'steam*':
+      - sun-java
+      - maven
+      - postgres
+      - steam
